@@ -1,0 +1,52 @@
+{
+  "name": "Document",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Document title"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL of the uploaded PDF"
+    },
+    "extracted_text": {
+      "type": "string",
+      "description": "Full text extracted from PDF"
+    },
+    "brief_summary": {
+      "type": "string",
+      "description": "Brief summary of the document"
+    },
+    "detailed_summary": {
+      "type": "string",
+      "description": "Detailed summary of the document"
+    },
+    "bullet_summary": {
+      "type": "string",
+      "description": "Bullet point summary"
+    },
+    "page_count": {
+      "type": "number",
+      "description": "Number of pages in the document"
+    },
+    "file_size": {
+      "type": "string",
+      "description": "File size in MB"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "processing",
+        "ready",
+        "error"
+      ],
+      "default": "processing"
+    }
+  },
+  "required": [
+    "title",
+    "file_url",
+    "status"
+  ]
+}
